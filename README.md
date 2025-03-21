@@ -1,27 +1,27 @@
 # External Data Server for Roblox
 
-Hey! This project is a Node.js server paired with a Roblox ModuleScript, letting you store and manage player data outside of Roblox. If you've ever wanted more flexibility or control over your game's data — like checking or tweaking it through a website — this could be the solution.
+Alright, so this is a Node.js server paired with a Roblox ModuleScript. It lets you store and mess with player data outside of Roblox itself. If you've ever wanted more control over your game's data — like checking it or tweaking it through a website — this could be what you're looking for.
 
 ## Quick notes:
-- You won't be given support if you fail to follow this tutorial and complain about why the code isn't working.
+- If you skip steps or don't follow the guide, and then come back here complaining that it doesn't work — that's on you.
 
 ---
 
-## Why Use This?
-- **Simple Setup:** No complex steps here, just follow along and you'll be ready in no time.
-- **Secure:** AmethystStore uses API-keys to make sure nobody except you can access the DataStores.
-- **Optimized:** Everything is asychronous, nothing is non-optimized here.
-- **Inspired by ProfileStore:** Features metadata, data locking, and other handy methods.
+## Why Bother With This?
+- **Easy Setup:** Nothing wild here. Follow the steps, and you'll be set.
+- **Secure:** Uses API keys, so not just anyone can mess with your data.
+- **Optimized:** Fast, asynchronous, and not a sloppy mess.
+- **Inspired by ProfileStore:** Metadata, data locking — all that good stuff.
 
 ---
 
 ## Getting Started
-**Requirements:**
+**What You Need:**
 - Node.js installed.
-- A hosting option (like Render or Railway) or run it locally.
-- Basic Roblox scripting knowledge.
+- A hosting service (Render or Railway work fine) or just run it locally.
+- Some Roblox scripting basics.
 
-### Quick Setup:
+### How to Set It Up:
 1. **Clone the Repo:**
    ```bash
    git clone https://github.com/yourusername/your-repo-name.git
@@ -36,18 +36,18 @@ Hey! This project is a Node.js server paired with a Roblox ModuleScript, letting
    API_KEY=SuperSecureKey
    PORT=3000
    ```
-4. **Start the Server:**
+4. **Run the Server:**
    ```bash
    node server.js
    ```
-   It runs on `http://localhost:3000`. Make sure to secure your API key!
+   It'll be up on `http://localhost:3000`. Don't be careless with that API key!
 
 ---
 
-## Connecting to Roblox
-- Place the **ExternalDataModule** in `ReplicatedStorage`.
-- Configure the API endpoint and key in the module.
-- Quick example:
+## Hooking It Up to Roblox
+- Drop the **ExternalDataModule** in `ReplicatedStorage`.
+- Set the API endpoint and key in the module.
+- Example code:
 
 ```lua
 local DataModule = require(game:GetService("ReplicatedStorage").ExternalDataModule)
@@ -57,18 +57,19 @@ print(playerData)
 
 ---
 
-## Quick heads-up
-- Do NOT share your API key, this could lead to exploiters abusing AmethystStore and editing data without you knowing.
-- Never use anything except HTML if you actually deploy this.
-- Rate-limit everything here to make sure no one can abuse this system.
+## Heads-Up Before You Mess This Up
+- Don't go posting your API key for everyone to see.
+- Only use HTTPS if you're deploying this for real.
+- Rate-limit requests, or someone might spam and ruin your day.
 
 ---
 
 ## Hosting Options
-- **Free and Simple:** Railway, Render (great for small projects!)
-- **Paid and Reliable:** DigitalOcean, AWS Lightsail.
+- **Free and Simple:** Railway, Render (solid for small projects)
+- **Paid and Reliable:** DigitalOcean, AWS Lightsail — if you're serious about it.
 
 ---
 
 ## License
-This project is released under the [Unlicense](https://unlicense.org/). That means it's public domain — do what you want with it, just don't blame me if something breaks!
+This project is under the [Unlicense](https://unlicense.org/). It's public domain, do whatever you want, but don't blame me if it breaks.
+
